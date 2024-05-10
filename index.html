@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adapted Multimedia</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+    body {
+      padding: 50px;
+      text-align: center; /* Center text */
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font to body */
+    }
+    .nav-buttons {
+      text-align: center; /* Center navigation buttons */
+    }
+    .nav-button {
+      display: inline-block; /* Display buttons inline */
+      width: 2in; /* Set width of buttons to 2 inches */
+      margin-bottom: 10px;
+      background-color: #B4917F; /* HEX color code */
+      color: #fff; /* Text color */
+      padding: 10px 20px; /* Padding for the buttons */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center; /* Center text within buttons */
+      font-family: 'Roboto', sans-serif; /* Apply Roboto font to buttons */
+    }
+    .nav-button:hover {
+      background-color: #8A6F61; /* HEX color code for hover state */
+    }
+    .image {
+      display: block;
+      margin: 0 auto;
+    }
+    .narration {
+      margin-bottom: 20px;
+      text-align: left; /* Left-align narration text */
+    }
+    .caption {
+      font-style: italic;
+      color: #666;
+      text-align: left; /* Left-align captions */
+    }
+    #text {
+      text-align: left; /* Left-align specified text */
+    }
+  </style>
+</head>
+<body>
+  <h1>Multimedia Portfolio Options for Students with Dyslexia</h1> <!-- Title -->
+  <div class="nav-buttons">
+    <a class="nav-button" href="#text_narration_image">Text, Narration, Image</a>
+    <a class="nav-button" href="#narration_image">Narration, Image</a>
+    <a class="nav-button" href="#text">Text</a>
+  </div>
+  
+  <h2 id="text_narration_image">Text, Narration, Image</h2>
+  <img class="image" src="skull.png" alt="BLANK">
+  <p id="narration1" class="narration">In this image, we have a lateral view of a human skull. The skull is the bony structure that encases and protects the brain. Looking at this particular view, we can see the brain within the cranial cavity. The brain is divided into several regions, including the cerebrum, cerebellum, and brainstem. Starting from the lower part, we have the brainstem, which is comprised of the medulla oblongata, pons, and midbrain. The brainstem is responsible for many essential functions such as regulating heart rate, breathing, and basic life-sustaining activities. Moving upwards, we can observe the cerebellum, which sits beneath the cerebrum. The cerebellum is primarily responsible for coordination, precision, and voluntary movements. Lastly, we have the cerebrum, the largest and most complex part of the brain. It's divided into two hemispheres and is responsible for higher functions such as thinking, perceiving, and voluntary actions.</p>
+  
+  <button class="nav-button" id="playAudioButton1">Play Audio</button>
+  <audio id="audio1" src="brain_narration_file.mp3"></audio>
+
+  <h2 id="narration_image">Narration, Image</h2>
+  <img class="image" src="skull.png" alt="BLANK">
+  <p id="narration2" class="narration"></p>
+  
+  <button class="nav-button" id="playAudioButton2">Play Audio</button>
+  <audio id="audio2" src="brain_narration_file.mp3"></audio>
+
+  <h2 id="text">Text</h2>
+  <p style="text-align: left;"> The skull is the bony structure that encases and protects the brain. Looking at this particular view, we can see the brain within the cranial cavity. The brain is divided into several regions, including the cerebrum, cerebellum, and brainstem.
+
+    Starting from the lower part, we have the brainstem, which is comprised of the medulla oblongata, pons, and midbrain. The brainstem is responsible for many essential functions such as regulating heart rate, breathing, and basic life-sustaining activities.
+    
+    Moving upwards, we can observe the cerebellum, which sits beneath the cerebrum. The cerebellum is primarily responsible for coordination, precision, and voluntary movements.
+    
+    Lastly, we have the cerebrum, the largest and most complex part of the brain. It's divided into two hemispheres and is responsible for higher functions such as thinking, perceiving, and voluntary actions.
+    
+    </p>
+
+  
+  <script>
+    'use strict';
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get references to the navigation buttons, audio elements, and caption elements
+      const navButtons = document.querySelectorAll('.nav-button');
+      const audio1 = document.getElementById('audio1');
+      const audio2 = document.getElementById('audio2');
+      
+      // Add event listeners to the navigation buttons
+      navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          console.log('Navigation button clicked');
+
+          // Play or pause the corresponding audio based on the button clicked
+          if (button.id === 'playAudioButton1') {
+            if (audio1.paused) {
+              audio1.play();
+              button.textContent = "Pause Audio";
+            } else {
+              audio1.pause();
+              button.textContent = "Play Audio";
+            }
+          } else if (button.id === 'playAudioButton2') {
+            if (audio2.paused) {
+              audio2.play();
+              button.textContent = "Pause Audio";
+            } else {
+              audio2.pause();
+              button.textContent = "Play Audio";
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

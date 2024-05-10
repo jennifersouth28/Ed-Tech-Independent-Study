@@ -1,0 +1,24 @@
+body {
+  background-color: B4917F; /* Beaver */
+  color: #000000; /* Set font color to black */
+  font-family: helvetica;
+}
+
+.nav-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.nav-button:hover {
+  background-color: #007bff; /* Darken color on hover */
+  cursor: pointer;
+}
+
+.nav-button:active {
+  background-color: #0056b3; /* Darken color when button is clicked */
+}
