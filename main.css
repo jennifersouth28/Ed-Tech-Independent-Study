@@ -5,7 +5,7 @@ body {
 }
 
 .nav-button {
-  background-color: blue;
+  background-color: #B4917F;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -15,10 +15,10 @@ body {
 }
 
 .nav-button:hover {
-  background-color: #007bff; /* Darken color on hover */
+  background-color: #8A6F61; /* Darken color on hover */
   cursor: pointer;
 }
 
 .nav-button:active {
-  background-color: #0056b3; /* Darken color when button is clicked */
+  background-color: #B4917F; /* Darken color when button is clicked */
 }
